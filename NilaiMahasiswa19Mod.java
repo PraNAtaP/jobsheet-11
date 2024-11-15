@@ -59,19 +59,19 @@ public class NilaiMahasiswa19Mod {
     
     static void mahasiswaNilaiTertinggi(int[][] nilai, String[] nama) {
         int tertinggi = 0;
-        int indexMhs = 0;
+        int jmlMhs = 0;
         int minggu = 0;
         
         for (int i = 0; i < nilai.length; i++) {
             for (int j = 0; j < nilai[i].length; j++) {
                 if (nilai[i][j] > tertinggi) {
                     tertinggi = nilai[i][j];
-                    indexMhs = i;
+                    jmlMhs = i;
                     minggu = j + 1;
                 }
             }
         }
-        System.out.println("Mahasiswa dengan nilai tertinggi adalah " + nama[indexMhs]);
+        System.out.println("Mahasiswa dengan nilai tertinggi adalah " + nama[jmlMhs]);
         System.out.println("Nilai : " + tertinggi + " (Minggu ke-" + minggu + ")");
     }
 }
