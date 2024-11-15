@@ -4,9 +4,9 @@ public class NilaiMahasiswa19Mod {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
     
-        System.out.print("Masukkan jumlah mahasiswa: ");
+        System.out.print("Masukkan jumlah mahasiswa : ");
         int jumlahMhs = input.nextInt();
-        System.out.print("Masukkan jumlah tugas/minggu: ");
+        System.out.print("Masukkan jumlah tugas/minggu : ");
         int jumlahTugas = input.nextInt();
 
         int[][] nilai = new int[jumlahMhs][jumlahTugas];
@@ -14,16 +14,16 @@ public class NilaiMahasiswa19Mod {
 
         for (int i = 0; i < jumlahMhs; i++) {
             input.nextLine();
-            System.out.print("\nMasukkan nama mahasiswa ke-" + (i+1) + ": ");
+            System.out.print("\nMasukkan nama mahasiswa ke-" + (i+1) + " : ");
             nama[i] = input.nextLine();
             
-            System.out.println("Masukkan nilai untuk " + nama[i] + ": ");
+            System.out.println("Masukkan nilai untuk " + nama[i] + " : ");
             for (int j = 0; j < jumlahTugas; j++) {
-                System.out.print("Minggu ke-" + (j+1) + ": ");
+                System.out.print("Minggu ke-" + (j+1) + " : ");
                 nilai[i][j] = input.nextInt();
             }
         }
-        
+
         tampilkanNilai(nilai, nama);
         cariNilaiTertinggi(nilai);
         mahasiswaNilaiTertinggi(nilai, nama);
@@ -34,7 +34,7 @@ public class NilaiMahasiswa19Mod {
     static void tampilkanNilai(int[][] nilai, String[] nama) {
         System.out.println("\n=== Data Nilai Mahasiswa ===");
         for (int i = 0; i < nilai.length; i++) {
-            System.out.print(nama[i] + ": ");
+            System.out.print(nama[i] + " : ");
             for (int j = 0; j < nilai[i].length; j++) {
                 System.out.print(nilai[i][j] + " ");
             }
@@ -72,6 +72,6 @@ public class NilaiMahasiswa19Mod {
             }
         }
         System.out.println("Mahasiswa dengan nilai tertinggi adalah " + nama[indexMhs]);
-        System.out.println("Nilai: " + tertinggi + " (Minggu ke-" + minggu + ")");
+        System.out.println("Nilai : " + tertinggi + " (Minggu ke-" + minggu + ")");
     }
 }
